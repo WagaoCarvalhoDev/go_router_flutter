@@ -17,8 +17,9 @@ class Dashboard extends StatelessWidget {
             ElevatedButton(
                 child: const Text('Profile'),
                 onPressed: () {
+                  String name = 'Wagner';
                   //GoRouter.of(context).go('/profile');
-                  context.go('/profile');
+                  context.go('/profile/$name');
                 }),
             ElevatedButton(
                 child: const Text('Secondary route'),
