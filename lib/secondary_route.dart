@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_flutter/route_names.dart';
 
 class SecondaryRoute extends StatelessWidget {
   const SecondaryRoute({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class SecondaryRoute extends StatelessWidget {
             child: const Text('Dashboard'),
             onPressed: () {
               //GoRouter.of(context).go('/');
-              context.go('/');
+              context.goNamed(RouteNames.dashboard);
             }),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_flutter/route_names.dart';
 import 'package:go_router_flutter/secondary_route.dart';
 
 import 'dashboard.dart';
@@ -24,16 +25,20 @@ class MyApp extends StatelessWidget {
     //initialLocation: '/profile',
     routes: [
       GoRoute(
+        name: RouteNames.dashboard,
         path: '/',
         builder: (context, state) => const Dashboard(),
         routes: [
           GoRoute(
-            path: 'secondary_route',
+            name: RouteNames.secondaryRoute,
+            path: 'secondaryRoute',
             builder: (context, state) => const SecondaryRoute(),
           ),
         ],
       ),
       GoRoute(
+        name: RouteNames.profile,
+        //route with parameter
         path: '/profile/:name',
         builder: (context, state) => Profile(
           name: state.params['name']!,

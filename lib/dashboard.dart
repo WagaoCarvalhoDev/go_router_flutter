@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_flutter/route_names.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -19,13 +20,15 @@ class Dashboard extends StatelessWidget {
                 onPressed: () {
                   String name = 'Wagner';
                   //GoRouter.of(context).go('/profile');
-                  context.go('/profile/$name');
+                  context.goNamed(RouteNames.profile, params: {'name': name});
                 }),
             ElevatedButton(
                 child: const Text('Secondary route'),
                 onPressed: () {
                   //GoRouter.of(context).go('/profile');
-                  context.go('/secondary_route');
+                  context.goNamed(
+                    RouteNames.secondaryRoute,
+                  );
                 }),
           ],
         ),
