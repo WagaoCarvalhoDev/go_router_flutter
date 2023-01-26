@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 
   final _router = GoRouter(
+    //initialLocation: '/profile',
     routes: [
       GoRoute(
         path: '/',
