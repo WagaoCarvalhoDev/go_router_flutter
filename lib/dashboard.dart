@@ -11,12 +11,23 @@ class Dashboard extends StatelessWidget {
         title: const Text('Dashboard'),
       ),
       body: Center(
-        child: ElevatedButton(
-            child: const Text('Profile'),
-            onPressed: () {
-              //GoRouter.of(context).go('/profile');
-              context.go('/profile');
-            }),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+                child: const Text('Profile'),
+                onPressed: () {
+                  //GoRouter.of(context).go('/profile');
+                  context.go('/profile');
+                }),
+            ElevatedButton(
+                child: const Text('Secondary route'),
+                onPressed: () {
+                  //GoRouter.of(context).go('/profile');
+                  context.go('/secondary_route');
+                }),
+          ],
+        ),
       ),
     );
   }

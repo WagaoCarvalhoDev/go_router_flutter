@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_flutter/secondary_route.dart';
 
 import 'dashboard.dart';
 import 'profile.dart';
@@ -25,6 +26,12 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (context, state) => const Dashboard(),
+        routes: [
+          GoRoute(
+            path: 'secondary_route',
+            builder: (context, state) => const SecondaryRoute(),
+          ),
+        ],
       ),
       GoRoute(
         path: '/profile',
